@@ -41,10 +41,28 @@
         <section>
             <h1>Icebreaker</h1>
             <img src="https://codingbootcamps.io/wp-content/uploads/m2.png" alt="Meme"/>
-            put vidoe and audio here 
+           
+            <figure>
+                <figcaption> Background music: </figcaption>
+                <audio
+                    controls
+                    src="/song.mp3">
+                        <a href="/song.mp3">
+                            Download audio
+                        </a>
+                </audio>
+            </figure>
+            <iframe width="420" height="315"
+                src="https://www.youtube.com/watch?v=GspDybPhOeY&ab_channel=HawkNelsonVEVO">
+            </iframe>
+
         </section>
        
         <hr > 
+        <label for="Announcement"> <b>Announcement</b> </label>
+        <br>
+        <textarea id="Message" name="message" rows="2" cols="33"> The BIG News !!!!
+        </textarea>
         <section>
             <h1> Positons Update</h1>
             <section>
@@ -65,28 +83,54 @@
                     <li> XXXXX </li>
                     <li> <strong> Fill your Form</strong></li>
                     <li> Please do this by <em>Oct 6 20xx</em> </li>
+                    <li> <label for="pay-select">Choose your best payment method :</label>
+
+                        <select name="method" id="pay-select">
+                            <option value="">--Please choose an option--</option>
+                            <option value="vemon">Vemon</option>
+                            <option value="Zelle">Zelle</option>
+
+                        </select>
+                    </li>
                 </ul>
             </section>
         </section>
-        <details>
-            <p> Rest of officer info can be found by Google drive</p>
-        </details>
+
         <form>
             <fieldset>
-              <legend>Choose your favorite monster</legend>
+              <legend>Choose your meeting time</legend>
           
-              <input type="radio" id="kraken" name="monster" value="K">
-              <label for="kraken">Kraken</label><br>
-          
-              <input type="radio" id="sasquatch" name="monster" value="S">
-              <label for="sasquatch">Sasquatch</label><br>
-          
-              <input type="radio" id="mothman" name="monster" value="M" />
-              <label for="mothman">Mothman</label>
+              <input type="radio" id="Wednesday" name="date" value="K">
+              <label for="Wednesday">Wednesday</label><br>
+              <input type="radio" id="Friday" name="date" value="K">
+              <label for="Friday">Friday</label><br>
+              <input type="radio" id="Sunday" name="date" value="K">
+              <label for="Sunday">Sunday</label><br>
             </fieldset>
           </form>
-        <summary> hdhowe</summary>
+          <details>
+            <summary> Summary for meeting </summary>
+            <p> Please let us know if you have any question</p>
+          </details>
+        <h2>Vote on Best Intern Award</h2>
+        <label for="fav-intern">Choose your favorite Intern:</label>
+        <input list="fav-intern-choice" id="fav-intern" name="fav-intern">
 
+        <datalist id="fav-intern-choice">
+            <option value="Jack">
+            <option value="Jeniffer">
+            <option value="Rose">
+            <option value="Angela">
+            <option value="Karen">
+        </datalist>
+        <br>
+        <hr>
+        <label for="Upcoming" id="Upcoming Events"> <b>UPCOMING EVENTS </b> </label>
+        <br>
+        <textarea id="Message" name="message" rows="2" cols="33"> COME TO OUR SOCIAL !!!! 
+        JOIN OUR TEAM !!!
+        </textarea>
+        
         
 
     </main>
