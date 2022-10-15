@@ -8,8 +8,122 @@
     <link rel="icon" type="image/png" href="screenshots/Test2.png"/>
 </head>
 <body>
+    <style>
+        body {
+          background-color: rgb(241, 244, 199);
+          }  
+          @media only screen and (max-width: 700px) {
+            body {
+                background-color: rgb(255, 171, 162);
+            }
+          }
+          h1 {
+            font-size: 30px;
+            padding: 0%;
+          }
+          h3{
+            font-size: 7mm;
+            display: inline-block;
+          }
+          label{
+            font-size: 0.2in;
+          }
+          li{
+            font-size: 1em;
+            display: block;
+          }
+          h2{
+            font-size: 1lh;
+          }
+          option{
+            font-size: 1vw;
+          }
+          fieldset {
+            width: 300px;
+            border: 2px solid rgb(209, 121, 20);
+            padding: 0px;
+            margin: 0px;
+         }
+         textarea {
+            width: 300px;
+            border: 2px solid rgb(209, 121, 20);
+            padding-bottom: 10px;
+            margin-top: 7px;
+            position: relative;
+         }
+         div.c{
+            text-align: center;
+         }
+         ul > li{
+            background-color: rgb(177, 221, 178);
+         }
+         section ~ ul{
+            background-color: #c68888e0;
+         }
+         *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+         }
+          .one{
+            background-color: rgb(50, 9, 217);
+          }
+          h1 + section{
+            background-color: rgb(238, 212, 178);
+          }
+          section figure{
+            background-color:rgb(142, 165, 126);
+          }
+          img {
+            position: static;
+            }
+            a:link {
+            color: rgb(96, 63, 217);
+            }
+
+            /* visited link */
+            a:visited {
+            color: green;
+            }
+
+            /* mouse over link */
+            a:hover {
+            color: hotpink;
+            }
+
+            /* selected link */
+            a:active {
+            color: blue;
+            }
+            .flex-container {
+                display: flex;
+                background-color: rgb(249, 209, 76);
+            }
+
+            .flex-container > div {
+                background-color: #fdedede0;
+                margin: 10px;
+                padding: 50px;
+                font-size: 30px;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                background-color: #102435;
+                padding: 10px;
+            }
+            .grid-item {
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+
+    </style>
     <header>
-    <div> Sample Meeting Notes</div>
+    <div class="wrapper"> 
+        <div class="box one" style="color: rgb(255, 255, 255);"> Sample Meeting Notes</div>
+    </div>
         <nav>
             <ul>
                 <li><a href="#Attendance"> Attendance</a></li>
@@ -20,18 +134,18 @@
         </nav>
     </header>
     <main>
-        <h1>XXX Organization Update</h1>
+        <h1 style="color:rgb(255, 255, 255)" class="box one">XXX Organization Update</h1>
         <h2>October 5, 2022</h2>
         <hr>
         <section>
-            <h3 id ="Attendance"> Attendance </h3>
+            <h3 id ="Attendance" style = "color:rgb(61, 153, 72)"> Attendance </h3>
             <ol> 
                 <li> Board members: 3</li>
                 <li> Interns: 4</li>
                 <li> General Member: 4</li>
             </ol>
         </section>
-        <h3 id="Agenda"> Agenda</h3>
+        <h3 id="Agenda" style = "color:rgb(61, 153, 72)"> Agenda</h3>
         <p> The object of this meeting is to ......</p>
         <ul>
             <li><input type="checkbox"/> Icebreaker </li>
@@ -39,7 +153,8 @@
             <li><input type="checkbox"/> Upcoming plan</li>
         </ul>
         <section>
-            <h1>Icebreaker</h1>
+           
+            <h1 style = "color:rgb(22, 54, 170)">Icebreaker</h1>
             <img src="https://codingbootcamps.io/wp-content/uploads/m2.png" alt="Meme"/>
            
             <figure>
@@ -58,12 +173,14 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </section>
-       
+
         <hr > 
-        <label> <b>Announcement</b> </label>
+        <div class="c">
+        <h1 style = "color:rgb(233, 9, 9)"> <b>Announcement</b> </h1>
         <br>
         <textarea id="Message" name="message" rows="2" cols="33"> The BIG News !!!!
         </textarea>
+        </div>
         <section>
             <h1> Positons Update</h1>
             <section>
@@ -116,6 +233,13 @@
         <h2>Vote on Best Intern Award</h2>
         <label for="fav-intern">Choose your favorite Intern:</label>
         <input list="fav-intern-choice" id="fav-intern" name="fav-intern">
+        <div class="flex-container">
+            <div>Jeniffer</div>
+            <div>Jack</div>
+            <div>Rose</div>  
+            <div>Angela</div>
+            <div>Karen</div>
+        </div>
 
         <datalist id="fav-intern-choice">
             <option value="Jack">
@@ -138,6 +262,11 @@
     <hr />
     <footer>
         <h3>CSE 110 Lab 2 Meeting Sample </h3>
+        <div class="grid-container">
+            <div class="grid-item">Next Wednesday</div>
+            <div class="grid-item">@6pm</div>
+            <div class="grid-item">@Price Center</div>  
+          </div>
         <h4 id="Subscribe"> Subscribe </h4>
         <form onsubmit="alert('Subscribed')"> 
             <input type = "text" placeholder="Enter Email" />
